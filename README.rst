@@ -3,9 +3,9 @@ home-assistant-mqtt-export
 
 Custom MQTT export component for Home Assistant. 
 
-
 Setup
 -----
+
 Put the file ``mqtt_export.py`` file in the folder ``custom_components`` of
 your local Home Assistant configuration folder ``.homeassistant``.
 
@@ -19,6 +19,7 @@ the publishing topic (``publish_topic``).
 
 Sample output
 -------------
+
 The component is dumping a lot of information in one MQTT message. 
 
 .. code:: json
@@ -67,4 +68,5 @@ The component is dumping a lot of information in one MQTT message.
 
 License
 -------
+
 ``home-assistant-mqtt-export`` is licensed under MIT, for more details check LICENSE.
