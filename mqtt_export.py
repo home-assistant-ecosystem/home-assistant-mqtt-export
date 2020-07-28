@@ -15,8 +15,9 @@ mqtt_export:
 import json
 
 import homeassistant.loader as loader
+from homeassistant.components import mqtt #Updated 7/28/2020 - DB
 from homeassistant.const import STATE_UNKNOWN, EVENT_STATE_CHANGED
-from homeassistant.remote import JSONEncoder
+from homeassistant.helpers.json import JSONEncoder # Updated 7/28/2020 DB
 
 DOMAIN = "mqtt_export"
 DEPENDENCIES = ["mqtt"]
@@ -27,7 +28,7 @@ PAYLOAD = None
 
 def setup(hass, config):
     """Set up the MQTT export component."""
-    mqtt = loader.get_component("mqtt")
+    #mqtt = loader.get_component("mqtt") # Commented Out as per module import above 7/28/2020 DB
     pub_topic = config[DOMAIN].get("publish_topic", DEFAULT_TOPIC)
 
     global PAYLOAD
@@ -50,3 +51,4 @@ def setup(hass, config):
     hass.bus.listen(EVENT_STATE_CHANGED, mqtt_event_listener)
 
     return True
+
