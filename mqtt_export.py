@@ -1,7 +1,7 @@
 """
 MQTT publisher for all Home Assistant states.
 
-Copyright (c) 2016-2023 Fabian Affolter <fabian@affolter-engineering.ch>
+Copyright (c) 2016-2024 Fabian Affolter <fabian@affolter-engineering.ch>
 Licensed under MIT
 
 For questions and issues please use https://community.home-assistant.io
